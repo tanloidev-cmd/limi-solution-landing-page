@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="LiMi Solutions — Smart Digital Solutions for Your Business. We build modern websites and custom management systems to streamline operations, improve efficiency, and help businesses grow." />
+  <meta name="theme-color" content="#333333" />
+  <title>LiMi Solutions — Smart Digital Solutions for Your Business</title>
+
+  <!-- Favicon (inline SVG, gold monogram) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23333333'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' fill='%23d4a843' text-anchor='middle' font-weight='bold'%3ELM%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ============================================================
+       NAVIGATION (top navbar)
+  ============================================================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="LiMi Solutions home">
+        <span class="brand-mark">LM</span>
+        <span class="brand-name">LiMi <em>Solutions</em></span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary">
+        <ul class="desktop-nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn btn-gold header-cta">Start a Project</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Full-screen hidden navigation overlay -->
+  <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#stats" class="nav-link">Impact</a></li>
+      <li><a href="#pricing" class="nav-link">Pricing</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-gold nav-cta">Start a Project</a>
+  </nav>
+
+  <main>
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-orb hero-orb--1"></div>
+        <div class="hero-orb hero-orb--2"></div>
+        <div class="hero-orb hero-orb--3"></div>
+        <div class="hero-grid"></div>
+      </div>
+
+      <div class="container hero-inner">
+        <p class="hero-eyebrow reveal">Smart Digital Solutions for Your Business</p>
+        <h1 class="hero-title reveal">We build the digital<br />foundation your business<br /><span class="accent">deserves.</span></h1>
+        <p class="hero-subtitle reveal">
+          Modern websites and custom management systems that streamline operations,
+          improve efficiency, and help your business grow — engineered with precision,
+          designed with elegance.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#pricing" class="btn btn-gold">Explore Pricing</a>
+          <a href="#services" class="btn btn-ghost">See What We Do</a>
+        </div>
+        <div class="hero-meta reveal">
+          <span>Trusted by 120+ businesses</span>
+          <span class="dot"></span>
+          <span>4.9/5 average rating</span>
+        </div>
+      </div>
+
+      <a href="#services" class="scroll-cue" aria-label="Scroll to services">
+        <span class="scroll-cue-text">Scroll</span>
+        <span class="scroll-cue-line"></span>
+      </a>
+    </section>
+
+    <!-- ============================================================
+         SERVICES
+    ============================================================ -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">What We Do</p>
+          <h2 class="section-title">Solutions built to move your business forward</h2>
+          <p class="section-lead">
+            From first impression to daily operations, we craft digital tools that work
+            as hard as you do.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M4 7h16"/></svg>
+            </div>
+            <h3 class="card-title">Custom Websites</h3>
+            <p class="card-text">
+              Fast, responsive, conversion-focused websites designed to reflect your brand
+              and turn visitors into customers.
+            </p>
+            <a href="#contact" class="card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+            </div>
+            <h3 class="card-title">Management Systems</h3>
+            <p class="card-text">
+              Custom dashboards, CRMs, and internal tools that automate repetitive work
+              and give you real-time visibility.
+            </p>
+            <a href="#contact" class="card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+            </div>
+            <h3 class="card-title">Process Automation</h3>
+            <p class="card-text">
+              Connect your tools and eliminate manual steps so your team can focus on
+              high-value work instead of busywork.
+            </p>
+            <a href="#contact" class="card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+            </div>
+            <h3 class="card-title">Analytics &amp; Insights</h3>
+            <p class="card-text">
+              Clear reporting and dashboards that turn raw data into decisions you can
+              act on with confidence.
+            </p>
+            <a href="#contact" class="card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="m8 21 4-4 4 4"/></svg>
+            </div>
+            <h3 class="card-title">E-Commerce</h3>
+            <p class="card-text">
+              Seamless online stores with secure checkout, inventory sync, and a buying
+              experience your customers will love.
+            </p>
+            <a href="#contact" class="card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <h3 class="card-title">Support &amp; Maintenance</h3>
+            <p class="card-text">
+              Ongoing updates, monitoring, and improvements that keep your systems fast,
+              secure, and always evolving.
+            </p>
+            <a href="#contact" class="card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+    ============================================================ -->
+    <section class="section section-alt" id="about">
+      <div class="container about-grid">
+        <div class="about-media reveal">
+          <img src="https://picsum.photos/seed/limi-office/800/600" alt="The LiMi Solutions team collaborating in a modern office" loading="lazy" width="800" height="600" />
+          <div class="about-badge">
+            <span class="about-badge-num">8+</span>
+            <span class="about-badge-label">Years of<br />experience</span>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <p class="section-eyebrow reveal">About LiMi Solutions</p>
+          <h2 class="section-title reveal">Technology that works quietly, so your business works loudly</h2>
+          <p class="reveal">
+            LiMi Solutions partners with growing businesses to design and build the digital
+            systems behind their success. We believe great technology should feel effortless —
+            elegant on the surface, powerful underneath.
+          </p>
+          <p class="reveal">
+            Whether you need a website that wins customers or a management system that removes
+            friction from your operations, we bring the same obsession with quality, clarity,
+            and measurable results.
+          </p>
+
+          <ul class="about-list">
+            <li class="reveal">
+              <span class="check" aria-hidden="true">&#10003;</span>
+              <span>Tailored solutions — no one-size-fits-all templates</span>
+            </li>
+            <li class="reveal">
+              <span class="check" aria-hidden="true">&#10003;</span>
+              <span>Transparent process with clear milestones</span>
+            </li>
+            <li class="reveal">
+              <span class="check" aria-hidden="true">&#10003;</span>
+              <span>Built to scale as your business grows</span>
+            </li>
+          </ul>
+
+          <a href="#contact" class="btn btn-dark reveal">Work With Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         STATS (animated counters)
+    ============================================================ -->
+    <section class="section stats-section" id="stats">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Our Impact</p>
+          <h2 class="section-title">Results that speak for themselves</h2>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat reveal">
+            <span class="stat-value" data-count="120" data-suffix="+">0</span>
+            <span class="stat-label">Projects Delivered</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-value" data-count="98" data-suffix="%">0</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-value" data-count="45" data-suffix="%">0</span>
+            <span class="stat-label">Avg. Efficiency Gain</span>
+          </div>
+          <div class="stat reveal">
+            <span class="stat-value" data-count="24" data-suffix="/7">0</span>
+            <span class="stat-label">Support Coverage</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRICING
+    ============================================================ -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Pricing</p>
+          <h2 class="section-title">Simple plans, transparent value</h2>
+          <p class="section-lead">
+            Choose the level of partnership that fits where you are today — upgrade anytime
+            as you grow.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+          <article class="price-card reveal">
+            <h3 class="price-name">Launch</h3>
+            <p class="price-desc">For new businesses getting online with a polished presence.</p>
+            <div class="price-amount"><span class="price-currency">$</span><span class="price-value">1,900</span><span class="price-period">/ project</span></div>
+            <ul class="price-features">
+              <li>Up to 5 custom pages</li>
+              <li>Mobile-first responsive design</li>
+              <li>Basic on-page SEO</li>
+              <li>Contact &amp; lead forms</li>
+              <li>2 rounds of revisions</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-block">Get Started</a>
+          </article>
+
+          <article class="price-card price-card--featured reveal">
+            <span class="price-flag">Most Popular</span>
+            <h3 class="price-name">Growth</h3>
+            <p class="price-desc">For established businesses ready to scale with smart systems.</p>
+            <div class="price-amount"><span class="price-currency">$</span><span class="price-value">4,900</span><span class="price-period">/ project</span></div>
+            <ul class="price-features">
+              <li>Up to 12 custom pages</li>
+              <li>Custom management dashboard</li>
+              <li>Advanced SEO &amp; analytics</li>
+              <li>Process automation setup</li>
+              <li>Priority support (3 months)</li>
+            </ul>
+            <a href="#contact" class="btn btn-gold btn-block">Get Started</a>
+          </article>
+
+          <article class="price-card reveal">
+            <h3 class="price-name">Enterprise</h3>
+            <p class="price-desc">For organizations needing fully tailored, integrated solutions.</p>
+            <div class="price-amount"><span class="price-currency">$</span><span class="price-value">Custom</span></div>
+            <ul class="price-features">
+              <li>Unlimited pages &amp; features</li>
+              <li>Full system integration</li>
+              <li>Dedicated project team</li>
+              <li>Custom reporting suite</li>
+              <li>Ongoing SLA &amp; support</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-block">Contact Sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+    ============================================================ -->
+    <section class="section section-alt" id="faq">
+      <div class="container container-narrow">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">FAQ</p>
+          <h2 class="section-title">Questions, answered</h2>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+              <span>How long does a typical project take?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="faq1">
+              <p>
+                Most website projects are delivered in 2–4 weeks, while custom management
+                systems typically take 6–10 weeks depending on scope. We'll give you a clear
+                timeline and milestone plan before we begin.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+              <span>Do you provide ongoing support after launch?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="faq2">
+              <p>
+                Yes. Every project includes a support window, and we offer flexible
+                maintenance plans for updates, monitoring, and continuous improvements so
+                your systems never fall behind.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+              <span>Can you work with our existing tools and systems?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="faq3">
+              <p>
+                Absolutely. We integrate with the tools you already use — CRMs, payment
+                gateways, accounting software, and more — so your new solution fits into
+                your workflow rather than disrupting it.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+              <span>What does the process look like?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="faq4">
+              <p>
+                We start with a discovery call to understand your goals, then move through
+                design, development, and testing with regular check-ins. You'll always know
+                exactly where your project stands.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+              <span>Do you offer custom pricing for larger projects?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="faq5">
+              <p>
+                Yes. For complex or multi-phase projects we provide tailored quotes based
+                on your specific requirements. Reach out and we'll scope it together at no
+                cost.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         NEWSLETTER / CONTACT
+    ============================================================ -->
+    <section class="section" id="contact">
+      <div class="container container-narrow">
+        <div class="newsletter reveal">
+          <p class="section-eyebrow">Stay in the Loop</p>
+          <h2 class="section-title">Get insights that help your business grow</h2>
+          <p class="newsletter-lead">
+            Join our newsletter for practical tips on websites, automation, and digital
+            strategy — no spam, ever.
+          </p>
+
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <label class="sr-only" for="newsletterEmail">Email address</label>
+            <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email address" autocomplete="email" required />
+            <button type="submit" class="btn btn-gold">Subscribe</button>
+          </form>
+          <p class="newsletter-message" id="newsletterMessage" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">&copy; <span id="year"></span> LiMi Solutions. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#" class="social-link" aria-label="Twitter / X">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1.6 2h6.4l4.4 5.9L18.9 2zm-1.1 18h1.7L7.1 3.9H5.3L17.8 20z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-8.5c0-2.03-.04-4.64-2.83-4.64-2.83 0-3.27 2.2-3.27 4.5V24H8V8z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .31.21.68.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13a5.9 5.9 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.15a4 4 0 1 1 0-7.99 4 4 0 0 1 0 7.99zM19.85 5.6a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky call-to-action button -->
+  <a href="#contact" class="sticky-cta" id="stickyCta" aria-label="Start a project">
+    <span class="sticky-cta-text">Start a Project</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
