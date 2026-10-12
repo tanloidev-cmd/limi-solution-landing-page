@@ -3,9 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="LiMi Solutions — Smart Digital Solutions for Your Business. We build modern websites and custom management systems to streamline operations, improve efficiency, and help businesses grow." />
+  <meta name="description" content="LiMi Solutions designs and builds websites, landing pages, and custom web apps in Ho Chi Minh City. Fixed-price quotes, full code handover, English and Vietnamese." />
   <meta name="theme-color" content="#333333" />
-  <title>LiMi Solutions — Smart Digital Solutions for Your Business</title>
+  <title>LiMi Solutions — Web Design &amp; Development in Ho Chi Minh City</title>
+
+  <link rel="canonical" href="https://limi.asia/" />
+  <link rel="alternate" hreflang="en" href="https://limi.asia/" />
+  <link rel="alternate" hreflang="vi" href="https://limi.asia/vi/" />
+  <link rel="alternate" hreflang="x-default" href="https://limi.asia/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://limi.asia/" />
+  <meta property="og:title" content="LiMi Solutions — Web Design &amp; Development in Ho Chi Minh City" />
+  <meta property="og:description" content="Website design and development, landing pages, and custom web apps in Ho Chi Minh City. Fixed-price quotes and full code handover." />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="vi_VN" />
 
   <!-- Favicon (inline SVG, gold monogram) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23333333'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='30' fill='%23d4a843' text-anchor='middle' font-weight='bold'%3ELM%3C/text%3E%3C/svg%3E" />
@@ -13,7 +25,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -30,37 +42,47 @@
 
       <nav class="desktop-nav" aria-label="Primary">
         <ul class="desktop-nav-list">
-          <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#project" class="nav-link">Project</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#pricing" class="nav-link">Pricing</a></li>
           <li><a href="#faq" class="nav-link">FAQ</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
-      <a href="#contact" class="btn btn-gold header-cta">Start a Project</a>
+      <div class="header-actions">
+        <div class="lang-switch" aria-label="Language">
+          <span class="lang-current" aria-current="true">EN</span>
+          <a href="vi/index.html" hreflang="vi" lang="vi">VI</a>
+        </div>
 
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
+        <a href="mailto:admin@limi.asia?subject=Project%20enquiry%20-%20LiMi%20Solutions" class="btn btn-gold header-cta">Start a Project</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" data-label-open="Open menu" data-label-close="Close menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
   </header>
 
   <!-- Full-screen hidden navigation overlay -->
   <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
     <ul class="mobile-nav-list">
-      <li><a href="#home" class="nav-link">Home</a></li>
       <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#project" class="nav-link">Project</a></li>
+      <li><a href="#process" class="nav-link">Process</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
-      <li><a href="#stats" class="nav-link">Impact</a></li>
-      <li><a href="#pricing" class="nav-link">Pricing</a></li>
       <li><a href="#faq" class="nav-link">FAQ</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
-    <a href="#contact" class="btn btn-gold nav-cta">Start a Project</a>
+    <a href="mailto:admin@limi.asia?subject=Project%20enquiry%20-%20LiMi%20Solutions" class="btn btn-gold nav-cta">Start a Project</a>
+    <div class="lang-switch lang-switch--mobile" aria-label="Language">
+      <span class="lang-current" aria-current="true">EN</span>
+      <a href="vi/index.html" hreflang="vi" lang="vi">VI</a>
+    </div>
   </nav>
 
   <main>
@@ -76,21 +98,21 @@
       </div>
 
       <div class="container hero-inner">
-        <p class="hero-eyebrow reveal">Smart Digital Solutions for Your Business</p>
+        <p class="hero-eyebrow reveal">Web Design &amp; Development &middot; Ho Chi Minh City</p>
         <h1 class="hero-title reveal">We build the digital<br />foundation your business<br /><span class="accent">deserves.</span></h1>
         <p class="hero-subtitle reveal">
-          Modern websites and custom management systems that streamline operations,
-          improve efficiency, and help your business grow — engineered with precision,
-          designed with elegance.
+          LiMi Solutions designs and builds landing pages, business websites, and custom
+          web apps &mdash; scoped clearly, quoted at a fixed price, and delivered on a
+          timeline you can plan around.
         </p>
         <div class="hero-actions reveal">
-          <a href="#pricing" class="btn btn-gold">Explore Pricing</a>
-          <a href="#services" class="btn btn-ghost">See What We Do</a>
+          <a href="mailto:admin@limi.asia?subject=Project%20enquiry%20-%20LiMi%20Solutions" class="btn btn-gold">Start a project</a>
+          <a href="#services" class="btn btn-ghost">See what we do</a>
         </div>
-        <div class="hero-meta reveal">
-          <span>Trusted by 120+ businesses</span>
+        <div class="hero-facts reveal">
+          <span>Ho Chi Minh City, Vietnam</span>
           <span class="dot"></span>
-          <span>4.9/5 average rating</span>
+          <span>Working in English &amp; Vietnamese</span>
         </div>
       </div>
 
@@ -107,10 +129,10 @@
       <div class="container">
         <div class="section-head reveal">
           <p class="section-eyebrow">What We Do</p>
-          <h2 class="section-title">Solutions built to move your business forward</h2>
+          <h2 class="section-title">Three service lines, one standard of quality</h2>
           <p class="section-lead">
-            From first impression to daily operations, we craft digital tools that work
-            as hard as you do.
+            We focus on three core service lines so everything we hand over meets the same
+            bar for design, load speed, and room to grow.
           </p>
         </div>
 
@@ -119,73 +141,158 @@
             <div class="card-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><path d="M4 7h16"/></svg>
             </div>
-            <h3 class="card-title">Custom Websites</h3>
+            <h3 class="card-title">Landing Pages</h3>
             <p class="card-text">
-              Fast, responsive, conversion-focused websites designed to reflect your brand
-              and turn visitors into customers.
+              Single-page sites built to run a campaign, validate an idea, or capture leads.
+              The layout guides visitors to one clear action, ships fast, and is easy to
+              keep updated.
             </p>
-            <a href="#contact" class="card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+            <a href="#contact" class="card-link">Talk about a landing page <span aria-hidden="true">&rarr;</span></a>
           </article>
 
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
             </div>
-            <h3 class="card-title">Management Systems</h3>
+            <h3 class="card-title">Business Websites</h3>
             <p class="card-text">
-              Custom dashboards, CRMs, and internal tools that automate repetitive work
-              and give you real-time visibility.
+              Multi-page websites that present your services, capability, and brand
+              professionally. Optimised for mobile load speed and structured for search,
+              so customers can actually find you.
             </p>
-            <a href="#contact" class="card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+            <a href="#contact" class="card-link">Talk about a website <span aria-hidden="true">&rarr;</span></a>
           </article>
 
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
             </div>
-            <h3 class="card-title">Process Automation</h3>
+            <h3 class="card-title">Custom Web Apps</h3>
             <p class="card-text">
-              Connect your tools and eliminate manual steps so your team can focus on
-              high-value work instead of busywork.
+              Internal tools and web applications built around one specific workflow &mdash;
+              dashboards, portals, and systems that replace spreadsheets and manual steps.
             </p>
-            <a href="#contact" class="card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
+            <a href="#contact" class="card-link">Talk about an app <span aria-hidden="true">&rarr;</span></a>
           </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
-            </div>
-            <h3 class="card-title">Analytics &amp; Insights</h3>
-            <p class="card-text">
-              Clear reporting and dashboards that turn raw data into decisions you can
-              act on with confidence.
-            </p>
-            <a href="#contact" class="card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
-          </article>
+    <!-- ============================================================
+         PRODUCT (upcoming)
+    ============================================================ -->
+    <section class="section section-alt" id="project">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">Product</p>
+          <h2 class="section-title">White-Label Reviews Hub</h2>
+          <p class="section-lead">
+            A product we are building for local marketing agencies: manage every client's
+            Google reviews from one platform. It is also exactly the kind of custom web app
+            work we take on.
+          </p>
+        </div>
 
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="m8 21 4-4 4 4"/></svg>
-            </div>
-            <h3 class="card-title">E-Commerce</h3>
-            <p class="card-text">
-              Seamless online stores with secure checkout, inventory sync, and a buying
-              experience your customers will love.
+        <div class="project-card reveal">
+          <div class="project-body">
+            <p class="project-text">
+              The system pulls Google Business Profile reviews for every client business into
+              one shared inbox, drafts AI replies, and requires the business owner to approve
+              the exact reply through a secure magic link before anything is published. It
+              does not auto-publish, and it does not gate reviews.
             </p>
-            <a href="#contact" class="card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
-          </article>
 
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-            <h3 class="card-title">Support &amp; Maintenance</h3>
-            <p class="card-text">
-              Ongoing updates, monitoring, and improvements that keep your systems fast,
-              secure, and always evolving.
+            <ul class="project-list">
+              <li>
+                <span class="check" aria-hidden="true">&#10003;</span>
+                <span><strong>Multi-tenant, white-label:</strong> each agency gets its own workspace with role-based permissions and strict data isolation between clients.</span>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">&#10003;</span>
+                <span><strong>One review inbox:</strong> reviews sync from every client location, filterable by rating, reply status, and location, with risk flags on the reviews that need attention first.</span>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">&#10003;</span>
+                <span><strong>AI reply drafts:</strong> replies generated in the client's brand voice and saved as immutable versions, so every change leaves a trace.</span>
+              </li>
+              <li>
+                <span class="check" aria-hidden="true">&#10003;</span>
+                <span><strong>Owner approval:</strong> nothing goes live until the business owner confirms it through a secure link &mdash; the agency cannot publish on their behalf.</span>
+              </li>
+            </ul>
+
+            <p class="project-note">
+              The product is still being finished and is not released. We are not taking
+              customers until the approval and publishing workflow is fully tested.
             </p>
-            <a href="#contact" class="card-link">Learn more <span aria-hidden="true">&rarr;</span></a>
-          </article>
+          </div>
+
+          <aside class="project-aside">
+            <span class="status-badge">Coming soon</span>
+            <p class="project-aside-text">
+              Get launch news first, plus early-access pricing for customers who register
+              ahead of release.
+            </p>
+            <a href="mailto:admin@limi.asia?subject=White-Label%20Reviews%20Hub%20-%20waitlist" class="btn btn-gold btn-block">Join the waitlist</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROCESS
+    ============================================================ -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-eyebrow">How We Work</p>
+          <h2 class="section-title">Scoped and quoted individually for every project</h2>
+          <p class="section-lead">
+            We don't sell fixed packages, because two businesses with the same page count
+            rarely need the same work. Every project runs through four stages.
+          </p>
+        </div>
+
+        <ol class="process-grid">
+          <li class="process-step reveal">
+            <span class="process-num">01</span>
+            <h3 class="process-title">Discovery &amp; scoping</h3>
+            <p class="process-text">
+              We learn about your business, your customers, and what the site actually needs
+              to do. The first consultation is free and carries no obligation.
+            </p>
+          </li>
+
+          <li class="process-step reveal">
+            <span class="process-num">02</span>
+            <h3 class="process-title">Written proposal</h3>
+            <p class="process-text">
+              You get a written scope, a fixed price, and a milestone timeline before any
+              work starts. No surprises later.
+            </p>
+          </li>
+
+          <li class="process-step reveal">
+            <span class="process-num">03</span>
+            <h3 class="process-title">Design &amp; build</h3>
+            <p class="process-text">
+              We design and develop in stages and share progress continuously, so your
+              feedback lands while changes are still inexpensive.
+            </p>
+          </li>
+
+          <li class="process-step reveal">
+            <span class="process-num">04</span>
+            <h3 class="process-title">Launch &amp; handover</h3>
+            <p class="process-text">
+              We deploy to production, connect your domain, and hand over the accounts with
+              documentation. Ongoing support after handover is optional.
+            </p>
+          </li>
+        </ol>
+
+        <div class="process-cta reveal">
+          <a href="mailto:admin@limi.asia?subject=Project%20enquiry%20-%20LiMi%20Solutions" class="btn btn-dark">Request a quote</a>
         </div>
       </div>
     </section>
@@ -194,137 +301,40 @@
          ABOUT
     ============================================================ -->
     <section class="section section-alt" id="about">
-      <div class="container about-grid">
-        <div class="about-media reveal">
-          <img src="https://picsum.photos/seed/limi-office/800/600" alt="The LiMi Solutions team collaborating in a modern office" loading="lazy" width="800" height="600" />
-          <div class="about-badge">
-            <span class="about-badge-num">8+</span>
-            <span class="about-badge-label">Years of<br />experience</span>
-          </div>
+      <div class="container about-layout">
+        <div class="about-intro">
+          <p class="section-eyebrow reveal">About LiMi Solutions</p>
+          <h2 class="section-title reveal">The team that builds your site, working with you directly</h2>
         </div>
 
         <div class="about-content">
-          <p class="section-eyebrow reveal">About LiMi Solutions</p>
-          <h2 class="section-title reveal">Technology that works quietly, so your business works loudly</h2>
           <p class="reveal">
-            LiMi Solutions partners with growing businesses to design and build the digital
-            systems behind their success. We believe great technology should feel effortless —
-            elegant on the surface, powerful underneath.
+            LiMi Solutions is a web design and development practice based in Ho Chi Minh City.
+            We build websites and web applications for businesses that need a solid digital
+            foundation &mdash; not a template they will outgrow in a year.
           </p>
           <p class="reveal">
-            Whether you need a website that wins customers or a management system that removes
-            friction from your operations, we bring the same obsession with quality, clarity,
-            and measurable results.
+            We deliberately take on a limited number of projects so every client works
+            directly with the people designing and building the product. You follow progress
+            stage by stage instead of waiting for a single handover date.
           </p>
 
           <ul class="about-list">
             <li class="reveal">
               <span class="check" aria-hidden="true">&#10003;</span>
-              <span>Tailored solutions — no one-size-fits-all templates</span>
+              <span>Scope and cost agreed in writing before any work starts</span>
             </li>
             <li class="reveal">
               <span class="check" aria-hidden="true">&#10003;</span>
-              <span>Transparent process with clear milestones</span>
+              <span>You own your domain, your accounts, and your source code outright</span>
             </li>
             <li class="reveal">
               <span class="check" aria-hidden="true">&#10003;</span>
-              <span>Built to scale as your business grows</span>
+              <span>Progress updates in plain language at every milestone</span>
             </li>
           </ul>
 
-          <a href="#contact" class="btn btn-dark reveal">Work With Us</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         STATS (animated counters)
-    ============================================================ -->
-    <section class="section stats-section" id="stats">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="section-eyebrow">Our Impact</p>
-          <h2 class="section-title">Results that speak for themselves</h2>
-        </div>
-
-        <div class="stats-grid">
-          <div class="stat reveal">
-            <span class="stat-value" data-count="120" data-suffix="+">0</span>
-            <span class="stat-label">Projects Delivered</span>
-          </div>
-          <div class="stat reveal">
-            <span class="stat-value" data-count="98" data-suffix="%">0</span>
-            <span class="stat-label">Client Satisfaction</span>
-          </div>
-          <div class="stat reveal">
-            <span class="stat-value" data-count="45" data-suffix="%">0</span>
-            <span class="stat-label">Avg. Efficiency Gain</span>
-          </div>
-          <div class="stat reveal">
-            <span class="stat-value" data-count="24" data-suffix="/7">0</span>
-            <span class="stat-label">Support Coverage</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         PRICING
-    ============================================================ -->
-    <section class="section" id="pricing">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="section-eyebrow">Pricing</p>
-          <h2 class="section-title">Simple plans, transparent value</h2>
-          <p class="section-lead">
-            Choose the level of partnership that fits where you are today — upgrade anytime
-            as you grow.
-          </p>
-        </div>
-
-        <div class="pricing-grid">
-          <article class="price-card reveal">
-            <h3 class="price-name">Launch</h3>
-            <p class="price-desc">For new businesses getting online with a polished presence.</p>
-            <div class="price-amount"><span class="price-currency">$</span><span class="price-value">1,900</span><span class="price-period">/ project</span></div>
-            <ul class="price-features">
-              <li>Up to 5 custom pages</li>
-              <li>Mobile-first responsive design</li>
-              <li>Basic on-page SEO</li>
-              <li>Contact &amp; lead forms</li>
-              <li>2 rounds of revisions</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline btn-block">Get Started</a>
-          </article>
-
-          <article class="price-card price-card--featured reveal">
-            <span class="price-flag">Most Popular</span>
-            <h3 class="price-name">Growth</h3>
-            <p class="price-desc">For established businesses ready to scale with smart systems.</p>
-            <div class="price-amount"><span class="price-currency">$</span><span class="price-value">4,900</span><span class="price-period">/ project</span></div>
-            <ul class="price-features">
-              <li>Up to 12 custom pages</li>
-              <li>Custom management dashboard</li>
-              <li>Advanced SEO &amp; analytics</li>
-              <li>Process automation setup</li>
-              <li>Priority support (3 months)</li>
-            </ul>
-            <a href="#contact" class="btn btn-gold btn-block">Get Started</a>
-          </article>
-
-          <article class="price-card reveal">
-            <h3 class="price-name">Enterprise</h3>
-            <p class="price-desc">For organizations needing fully tailored, integrated solutions.</p>
-            <div class="price-amount"><span class="price-currency">$</span><span class="price-value">Custom</span></div>
-            <ul class="price-features">
-              <li>Unlimited pages &amp; features</li>
-              <li>Full system integration</li>
-              <li>Dedicated project team</li>
-              <li>Custom reporting suite</li>
-              <li>Ongoing SLA &amp; support</li>
-            </ul>
-            <a href="#contact" class="btn btn-outline btn-block">Contact Sales</a>
-          </article>
+          <a href="mailto:admin@limi.asia?subject=Project%20enquiry%20-%20LiMi%20Solutions" class="btn btn-dark reveal">Book a consultation</a>
         </div>
       </div>
     </section>
@@ -332,7 +342,7 @@
     <!-- ============================================================
          FAQ
     ============================================================ -->
-    <section class="section section-alt" id="faq">
+    <section class="section" id="faq">
       <div class="container container-narrow">
         <div class="section-head reveal">
           <p class="section-eyebrow">FAQ</p>
@@ -342,70 +352,83 @@
         <div class="faq-list">
           <div class="faq-item reveal">
             <button class="faq-question" aria-expanded="false" aria-controls="faq1">
-              <span>How long does a typical project take?</span>
+              <span>How much does a website cost?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
             <div class="faq-answer" id="faq1">
               <p>
-                Most website projects are delivered in 2–4 weeks, while custom management
-                systems typically take 6–10 weeks depending on scope. We'll give you a clear
-                timeline and milestone plan before we begin.
+                It depends on scope. A simple landing page is a very different project from a
+                multi-page website with a booking flow, or from a custom web app built from
+                scratch. Tell us what you need and we will send a written quote with a fixed
+                price &mdash; free, and with no obligation.
               </p>
             </div>
           </div>
 
           <div class="faq-item reveal">
             <button class="faq-question" aria-expanded="false" aria-controls="faq2">
-              <span>Do you provide ongoing support after launch?</span>
+              <span>How long does a project take?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
             <div class="faq-answer" id="faq2">
               <p>
-                Yes. Every project includes a support window, and we offer flexible
-                maintenance plans for updates, monitoring, and continuous improvements so
-                your systems never fall behind.
+                You get a milestone timeline together with your quote, based on the actual
+                scope of the work. We commit to a realistic date and hold to it, rather than
+                promising a fast one we cannot keep.
               </p>
             </div>
           </div>
 
           <div class="faq-item reveal">
             <button class="faq-question" aria-expanded="false" aria-controls="faq3">
-              <span>Can you work with our existing tools and systems?</span>
+              <span>Do you work with clients outside Vietnam?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
             <div class="faq-answer" id="faq3">
               <p>
-                Absolutely. We integrate with the tools you already use — CRMs, payment
-                gateways, accounting software, and more — so your new solution fits into
-                your workflow rather than disrupting it.
+                Yes. We work remotely with clients anywhere, and we are comfortable running
+                projects in English or Vietnamese.
               </p>
             </div>
           </div>
 
           <div class="faq-item reveal">
             <button class="faq-question" aria-expanded="false" aria-controls="faq4">
-              <span>What does the process look like?</span>
+              <span>Who owns the website when it is finished?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
             <div class="faq-answer" id="faq4">
               <p>
-                We start with a discovery call to understand your goals, then move through
-                design, development, and testing with regular check-ins. You'll always know
-                exactly where your project stands.
+                You do &mdash; your domain, your hosting accounts, your source code and your
+                content. We set everything up in your name and hand over full access at launch.
               </p>
             </div>
           </div>
 
           <div class="faq-item reveal">
             <button class="faq-question" aria-expanded="false" aria-controls="faq5">
-              <span>Do you offer custom pricing for larger projects?</span>
+              <span>What do you need from me to start?</span>
               <span class="faq-icon" aria-hidden="true"></span>
             </button>
             <div class="faq-answer" id="faq5">
               <p>
-                Yes. For complex or multi-phase projects we provide tailored quotes based
-                on your specific requirements. Reach out and we'll scope it together at no
-                cost.
+                Your logo and brand assets if you have them, the content you want on the site
+                (or we can help structure it), a decision-maker who can review progress, and
+                your existing domain if you already have one.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq6">
+              <span>What happens after launch?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-answer" id="faq6">
+              <p>
+                We can hand over completely so you are fully self-sufficient, or stay on for
+                ongoing updates and maintenance. It is your call, and there is no lock-in
+                either way.
               </p>
             </div>
           </div>
@@ -414,24 +437,34 @@
     </section>
 
     <!-- ============================================================
-         NEWSLETTER / CONTACT
+         CONTACT
     ============================================================ -->
-    <section class="section" id="contact">
+    <section class="section section-alt" id="contact">
       <div class="container container-narrow">
-        <div class="newsletter reveal">
-          <p class="section-eyebrow">Stay in the Loop</p>
-          <h2 class="section-title">Get insights that help your business grow</h2>
-          <p class="newsletter-lead">
-            Join our newsletter for practical tips on websites, automation, and digital
-            strategy — no spam, ever.
+        <div class="contact-card reveal">
+          <p class="section-eyebrow">Contact</p>
+          <h2 class="section-title">Tell us about your project</h2>
+          <p class="contact-lead">
+            Email us a few lines about what you need. We will reply with the questions we
+            need answered, or a concrete quote.
           </p>
 
-          <form class="newsletter-form" id="newsletterForm" novalidate>
-            <label class="sr-only" for="newsletterEmail">Email address</label>
-            <input type="email" id="newsletterEmail" name="email" placeholder="Enter your email address" autocomplete="email" required />
-            <button type="submit" class="btn btn-gold">Subscribe</button>
-          </form>
-          <p class="newsletter-message" id="newsletterMessage" role="status" aria-live="polite"></p>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Email</span>
+              <a class="contact-value" href="mailto:admin@limi.asia?subject=Project%20enquiry%20-%20LiMi%20Solutions">admin@limi.asia</a>
+            </li>
+            <li>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Ho Chi Minh City, Vietnam</span>
+            </li>
+            <li>
+              <span class="contact-label">Languages</span>
+              <span class="contact-value">English &amp; Vietnamese</span>
+            </li>
+          </ul>
+
+          <a href="mailto:admin@limi.asia?subject=Project%20enquiry%20-%20LiMi%20Solutions" class="btn btn-gold">Email admin@limi.asia</a>
         </div>
       </div>
     </section>
@@ -443,19 +476,15 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p class="footer-copy">&copy; <span id="year"></span> LiMi Solutions. All rights reserved.</p>
-      <div class="footer-social">
-        <a href="#" class="social-link" aria-label="Twitter / X">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1.6 2h6.4l4.4 5.9L18.9 2zm-1.1 18h1.7L7.1 3.9H5.3L17.8 20z"/></svg>
-        </a>
-        <a href="#" class="social-link" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.77-2.2 4.03 0 4.78 2.65 4.78 6.1V24h-4v-8.5c0-2.03-.04-4.64-2.83-4.64-2.83 0-3.27 2.2-3.27 4.5V24H8V8z"/></svg>
-        </a>
-        <a href="#" class="social-link" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.25 3.34.95.1-.74.4-1.25.72-1.54-2.55-.29-5.23-1.28-5.23-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12v3.14c0 .31.21.68.8.56A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-        </a>
-        <a href="#" class="social-link" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.13 1.38A5.9 5.9 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.13a5.9 5.9 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.9 5.9 0 0 0 2.13-1.38 5.9 5.9 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.15a4 4 0 1 1 0-7.99 4 4 0 0 1 0 7.99zM19.85 5.6a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
-        </a>
+      <div class="footer-meta">
+        <a href="mailto:admin@limi.asia">admin@limi.asia</a>
+        <span class="footer-sep" aria-hidden="true">&middot;</span>
+        <span>Ho Chi Minh City, Vietnam</span>
+        <span class="footer-sep" aria-hidden="true">&middot;</span>
+        <div class="lang-switch" aria-label="Language">
+          <span class="lang-current" aria-current="true">EN</span>
+          <a href="vi/index.html" hreflang="vi" lang="vi">VI</a>
+        </div>
       </div>
     </div>
   </footer>

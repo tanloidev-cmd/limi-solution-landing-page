@@ -1,6 +1,8 @@
 /* ============================================================
    LiMi Solutions — Landing Page Scripts
    Vanilla JavaScript, no dependencies.
+   Shared by the English page (index.html) and the Vietnamese
+   page (vi/index.html), so every lookup is guarded.
    ============================================================ */
 
 (function () {
@@ -11,68 +13,76 @@
   ---------------------------------------------------------- */
   const hamburger = document.getElementById("hamburger");
   const mobileNav = document.getElementById("mobileNav");
-  const navLinks = mobileNav.querySelectorAll(".nav-link");
-  const navCta = mobileNav.querySelector(".nav-cta");
 
-  function openMenu() {
-    hamburger.classList.add("active");
-    hamburger.setAttribute("aria-expanded", "true");
-    hamburger.setAttribute("aria-label", "Close menu");
-    mobileNav.classList.add("open");
-    mobileNav.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
-  }
+  if (hamburger && mobileNav) {
+    const navLinks = mobileNav.querySelectorAll(".nav-link");
+    const navCta = mobileNav.querySelector(".nav-cta");
+    const headerEl = document.getElementById("siteHeader");
+    const labelOpen = hamburger.getAttribute("data-label-open") || "Open menu";
+    const labelClose = hamburger.getAttribute("data-label-close") || "Close menu";
 
-  function closeMenu() {
-    hamburger.classList.remove("active");
-    hamburger.setAttribute("aria-expanded", "false");
-    hamburger.setAttribute("aria-label", "Open menu");
-    mobileNav.classList.remove("open");
-    mobileNav.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
-  }
+    const openMenu = function () {
+      hamburger.classList.add("active");
+      hamburger.setAttribute("aria-expanded", "true");
+      hamburger.setAttribute("aria-label", labelClose);
+      mobileNav.classList.add("open");
+      mobileNav.setAttribute("aria-hidden", "false");
+      if (headerEl) headerEl.classList.add("menu-open");
+      document.body.style.overflow = "hidden";
+    };
 
-  function toggleMenu() {
-    if (mobileNav.classList.contains("open")) {
-      closeMenu();
-    } else {
-      openMenu();
+    const closeMenu = function () {
+      hamburger.classList.remove("active");
+      hamburger.setAttribute("aria-expanded", "false");
+      hamburger.setAttribute("aria-label", labelOpen);
+      mobileNav.classList.remove("open");
+      mobileNav.setAttribute("aria-hidden", "true");
+      if (headerEl) headerEl.classList.remove("menu-open");
+      document.body.style.overflow = "";
+    };
+
+    hamburger.addEventListener("click", function () {
+      if (mobileNav.classList.contains("open")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // Close the menu when a nav link or the CTA is clicked
+    navLinks.forEach(function (link) {
+      link.addEventListener("click", closeMenu);
+    });
+    if (navCta) {
+      navCta.addEventListener("click", closeMenu);
     }
+
+    // Close the menu with the Escape key
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && mobileNav.classList.contains("open")) {
+        closeMenu();
+        hamburger.focus();
+      }
+    });
   }
-
-  hamburger.addEventListener("click", toggleMenu);
-
-  // Close the menu when a nav link is clicked
-  navLinks.forEach(function (link) {
-    link.addEventListener("click", closeMenu);
-  });
-  if (navCta) {
-    navCta.addEventListener("click", closeMenu);
-  }
-
-  // Close the menu with the Escape key
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && mobileNav.classList.contains("open")) {
-      closeMenu();
-      hamburger.focus();
-    }
-  });
 
   /* ----------------------------------------------------------
      Header background on scroll
   ---------------------------------------------------------- */
   const header = document.getElementById("siteHeader");
 
-  function onScrollHeader() {
-    if (window.scrollY > 40) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  }
+  if (header) {
+    const onScrollHeader = function () {
+      if (window.scrollY > 40) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    };
 
-  window.addEventListener("scroll", onScrollHeader, { passive: true });
-  onScrollHeader();
+    window.addEventListener("scroll", onScrollHeader, { passive: true });
+    onScrollHeader();
+  }
 
   /* ----------------------------------------------------------
      Smooth scroll navigation (progressive enhancement)
@@ -121,61 +131,6 @@
   }
 
   /* ----------------------------------------------------------
-     Animated statistics counters
-  ---------------------------------------------------------- */
-  const statValues = document.querySelectorAll(".stat-value");
-
-  function animateCounter(el) {
-    const target = parseInt(el.getAttribute("data-count"), 10);
-    const suffix = el.getAttribute("data-suffix") || "";
-    const duration = 2000; // ms
-    const startTime = performance.now();
-
-    function update(now) {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-
-      // Ease-out cubic for a natural deceleration
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.floor(eased * target);
-
-      el.textContent = current.toLocaleString() + suffix;
-
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      } else {
-        el.textContent = target.toLocaleString() + suffix;
-      }
-    }
-
-    requestAnimationFrame(update);
-  }
-
-  if ("IntersectionObserver" in window) {
-    const statsObserver = new IntersectionObserver(
-      function (entries, observer) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            animateCounter(entry.target);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    statValues.forEach(function (el) {
-      statsObserver.observe(el);
-    });
-  } else {
-    statValues.forEach(function (el) {
-      const target = parseInt(el.getAttribute("data-count"), 10);
-      const suffix = el.getAttribute("data-suffix") || "";
-      el.textContent = target.toLocaleString() + suffix;
-    });
-  }
-
-  /* ----------------------------------------------------------
      FAQ accordion
   ---------------------------------------------------------- */
   const faqItems = document.querySelectorAll(".faq-item");
@@ -184,14 +139,18 @@
     const question = item.querySelector(".faq-question");
     const answer = item.querySelector(".faq-answer");
 
+    if (!question || !answer) return;
+
     question.addEventListener("click", function () {
       const isOpen = item.classList.contains("open");
 
       // Close all items (single-open accordion)
       faqItems.forEach(function (other) {
         other.classList.remove("open");
-        other.querySelector(".faq-question").setAttribute("aria-expanded", "false");
-        other.querySelector(".faq-answer").style.maxHeight = null;
+        const otherQuestion = other.querySelector(".faq-question");
+        const otherAnswer = other.querySelector(".faq-answer");
+        if (otherQuestion) otherQuestion.setAttribute("aria-expanded", "false");
+        if (otherAnswer) otherAnswer.style.maxHeight = null;
       });
 
       // Open the clicked item if it was closed
@@ -203,40 +162,12 @@
     });
   });
 
-  /* ----------------------------------------------------------
-     Newsletter subscription form
-  ---------------------------------------------------------- */
-  const newsletterForm = document.getElementById("newsletterForm");
-  const newsletterEmail = document.getElementById("newsletterEmail");
-  const newsletterMessage = document.getElementById("newsletterMessage");
-
-  function isValidEmail(value) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-  }
-
-  newsletterForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const email = newsletterEmail.value.trim();
-
-    if (!email) {
-      newsletterMessage.textContent = "Please enter your email address.";
-      newsletterMessage.className = "newsletter-message error";
-      newsletterEmail.focus();
-      return;
-    }
-
-    if (!isValidEmail(email)) {
-      newsletterMessage.textContent = "Please enter a valid email address.";
-      newsletterMessage.className = "newsletter-message error";
-      newsletterEmail.focus();
-      return;
-    }
-
-    // Simulate a successful subscription (no backend in a static site)
-    newsletterMessage.textContent = "Thanks for subscribing! You're on the list.";
-    newsletterMessage.className = "newsletter-message success";
-    newsletterForm.reset();
+  // Keep an open answer sized correctly when the text reflows
+  window.addEventListener("resize", function () {
+    const openItem = document.querySelector(".faq-item.open");
+    if (!openItem) return;
+    const openAnswer = openItem.querySelector(".faq-answer");
+    if (openAnswer) openAnswer.style.maxHeight = openAnswer.scrollHeight + "px";
   });
 
   /* ----------------------------------------------------------
@@ -245,22 +176,22 @@
   const stickyCta = document.getElementById("stickyCta");
   const contactSection = document.getElementById("contact");
 
-  function onScrollCta() {
-    if (!contactSection) return;
+  if (stickyCta && contactSection) {
+    const onScrollCta = function () {
+      const contactTop = contactSection.getBoundingClientRect().top;
+      const contactVisible = contactTop < window.innerHeight;
 
-    const contactTop = contactSection.getBoundingClientRect().top;
-    const contactVisible = contactTop < window.innerHeight;
+      // Show after scrolling past the hero, hide when contact is in view
+      if (window.scrollY > 500 && !contactVisible) {
+        stickyCta.classList.add("visible");
+      } else {
+        stickyCta.classList.remove("visible");
+      }
+    };
 
-    // Show after scrolling past the hero, hide when contact is in view
-    if (window.scrollY > 500 && !contactVisible) {
-      stickyCta.classList.add("visible");
-    } else {
-      stickyCta.classList.remove("visible");
-    }
+    window.addEventListener("scroll", onScrollCta, { passive: true });
+    onScrollCta();
   }
-
-  window.addEventListener("scroll", onScrollCta, { passive: true });
-  onScrollCta();
 
   /* ----------------------------------------------------------
      Footer year
